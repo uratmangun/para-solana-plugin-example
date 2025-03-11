@@ -18,7 +18,7 @@ export default function ChatbotPage() {
         <li className="text-l">
           💡
           <span className="ml-2">
-            Try asking e.g. <code>What is my wallet address?</code> or <code>Request funds from faucet</code>
+            Try asking e.g. <code>create pregen wallet with this email  dev@test.getpara.com</code> or <code>claim pregen wallet with this email  dev@test.getpara.com</code>
           </span>
         </li>
       </ul>

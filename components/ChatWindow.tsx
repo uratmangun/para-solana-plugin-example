@@ -4,6 +4,7 @@ import { useChat } from 'ai/react';
 import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 import { Message } from 'ai';
 import { toast, Toaster } from 'sonner';
+import ReactMarkdown from 'react-markdown';
 
 const LoadingSpinner = () => (
   <div className="flex items-center space-x-2 text-gray-400 text-sm">
@@ -157,7 +158,7 @@ export const ChatWindow: FC<ChatWindowProps> = ({
             : "bg-blue-600 text-white"
         }`}>
           <div className="prose prose-invert max-w-none">
-            {message.content || message.text}
+            <ReactMarkdown>{message.content || message.text || ''}</ReactMarkdown>
           </div>
           
           {message.toolCalls && message.toolCalls.length > 0 && (

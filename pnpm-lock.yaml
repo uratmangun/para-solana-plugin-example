@@ -53,6 +53,9 @@ importers:
       '@uratmangun/solana-plugin-para-server':
         specifier: file:../solana-plugin-para/packages/plugin-para-server
         version: '@solana-agent-kit/plugin-para-server@file:../solana-plugin-para/packages/plugin-para-server(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)'
+      '@uratmangun/solana-plugin-para-web':
+        specifier: file:../solana-plugin-para/packages/plugin-para-web
+        version: '@solana-agent-kit/plugin-para-web@file:../solana-plugin-para/packages/plugin-para-web(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)'
       ai:
         specifier: ^3.4.33
         version: 3.4.33(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))(react@19.0.0)(sswr@2.1.0(svelte@5.16.0))(svelte@5.16.0)(vue@3.5.13(typescript@5.1.6))(zod@3.24.1)
@@ -1409,6 +1412,11 @@ packages:
 
   '@solana-agent-kit/plugin-para-server@file:../solana-plugin-para/packages/plugin-para-server':
     resolution: {directory: ../solana-plugin-para/packages/plugin-para-server, type: directory}
+    peerDependencies:
+      '@solana/web3.js': ^1.98.0
+
+  '@solana-agent-kit/plugin-para-web@file:../solana-plugin-para/packages/plugin-para-web':
+    resolution: {directory: ../solana-plugin-para/packages/plugin-para-web, type: directory}
     peerDependencies:
       '@solana/web3.js': ^1.98.0
 
@@ -5776,6 +5784,21 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  '@solana-agent-kit/plugin-para-web@file:../solana-plugin-para/packages/plugin-para-web(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@getpara/solana-web3.js-v1-integration': 1.5.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@getpara/web-sdk': 1.5.0
+      '@solana/web3.js': 1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      bs58: 6.0.0
+      solana-agent-kit: file:../michael-v2/packages/core(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)
+      zod: 3.24.2
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - encoding
+      - react
+      - utf-8-validate
+
   '@solana/buffer-layout@4.0.1':
     dependencies:
       buffer: 6.0.3
@@ -6826,7 +6849,7 @@ snapshots:
       eslint: 8.46.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0(eslint@8.46.0))(eslint@8.46.0)
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.46.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.7.0)(eslint@8.46.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.46.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(eslint@8.46.0))(eslint@8.46.0))(eslint@8.46.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.46.0)
       eslint-plugin-react: 7.37.3(eslint@8.46.0)
       eslint-plugin-react-hooks: 5.0.0-canary-7118f5dd7-20230705(eslint@8.46.0)
@@ -6857,7 +6880,7 @@ snapshots:
       is-glob: 4.0.3
       stable-hash: 0.0.4
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.46.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.7.0)(eslint@8.46.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.46.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(eslint@8.46.0))(eslint@8.46.0))(eslint@8.46.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -6872,7 +6895,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.46.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.7.0)(eslint@8.46.0):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.46.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(eslint@8.46.0))(eslint@8.46.0))(eslint@8.46.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
@@ -9522,8 +9545,7 @@ snapshots:
 
   zod@3.24.1: {}
 
-  zod@3.24.2:
-    optional: true
+  zod@3.24.2: {}
 
   zustand-sync-tabs@0.2.2(zustand@4.5.6(@types/react@18.3.2)(react@19.0.0)):
     dependencies:

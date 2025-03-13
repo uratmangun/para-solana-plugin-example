@@ -1,6 +1,5 @@
 
 import { SolanaAgentKit, type BaseWallet } from "solana-agent-kit";
-import ParaServerPlugin from "@uratmangun/solana-plugin-para-server";
 import bs58 from 'bs58'
 import {Keypair,Connection, VersionedTransaction,Transaction} from '@solana/web3.js'
 const keyPair = Keypair.fromSecretKey(bs58.decode(process.env.SOLANA_PRIVATE_KEY as string))
@@ -31,8 +30,7 @@ export const solanaAgent = new SolanaAgentKit(
   {
     OPENAI_API_KEY: process.env.OPENAI_API_KEY as string,
   }
-) // Add the plugins you would like to use
-  .use(ParaServerPlugin)
+) 
  
   
  

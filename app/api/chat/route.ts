@@ -4,20 +4,20 @@ import { createGroq } from "@ai-sdk/groq";
 import { createVercelAITools } from "solana-agent-kit";
 import { solanaAgent } from "@/utils/config";
 import { z } from "zod";
-
+import ParaServerPlugin from "@uratmangun/solana-plugin-para-server";
 
 // Initialize Groq with the mixtral model
 const groq = createGroq({
   baseURL: "https://api.groq.com/openai/v1",
   apiKey: process.env.GROQ_API_KEY,
 });
-
-const vercelTools = createVercelAITools(solanaAgent, solanaAgent.actions);
+const solanaAgentWithPara = solanaAgent.use(ParaServerPlugin)
+const vercelTools = createVercelAITools(solanaAgentWithPara, solanaAgentWithPara.actions);
 const tools = {...vercelTools,
   para:tool({
     id:"para.para" as `${string}.${string}`,
     description:"Para",
-    parameters: z.object({}),
+    parameters: z.object({email:z.string()}),
     execute: async (args: any, options: { abortSignal?: AbortSignal }) => {
       return "Para"
     }

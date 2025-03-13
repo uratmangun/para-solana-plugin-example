@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AuthLayout, ParaModal } from "@getpara/react-sdk";
-import  para  from "@/utils/para";
+import  {paraWeb as para}  from "@/utils/para";
 import "@getpara/react-sdk/styles.css";
 import { WalletDisplay } from "@/components/WalletDisplay";
 import { StepCard } from "@/components/StepCard";
@@ -143,6 +143,7 @@ export default function Home() {
       >
         Login
       </button>
+     
       <ParaModal
         para={para}
         isOpen={isOpen}

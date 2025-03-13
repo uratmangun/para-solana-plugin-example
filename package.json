@@ -7,7 +7,8 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"format": "prettier --write \"app\""
+		"format": "prettier --write \"app\"",
+		"clean": "rm -rf .next node_modules"
 	},
 	"engines": {
 		"node": ">=18"
@@ -15,8 +16,6 @@
 	"dependencies": {
 		"@ai-sdk/groq": "^1.1.12",
 		"@getpara/react-sdk": "^1.5.0",
-		"@getpara/server-sdk": "^1.5.0",
-		"@getpara/solana-web3.js-v1-integration": "^1.5.0",
 		"@langchain/community": "^0.3.11",
 		"@langchain/core": "^0.3.17",
 		"@langchain/langgraph": "^0.2.20",
@@ -29,7 +28,7 @@
 		"@types/node": "20.12.12",
 		"@types/react": "18.3.2",
 		"@types/react-dom": "18.3.0",
-		"@uratmangun/solana-plugin-para-server": "file:../plugin-para-server",
+		"@uratmangun/solana-plugin-para-server": "file:../solana-plugin-para/packages/plugin-para-server",
 		"ai": "^3.4.33",
 		"assert": "^2.1.0",
 		"autoprefixer": "10.4.14",

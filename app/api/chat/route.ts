@@ -3,17 +3,8 @@ import { Message,LanguageModelV1,streamText,tool } from "ai";
 import { createGroq } from "@ai-sdk/groq";
 import { createVercelAITools } from "solana-agent-kit";
 import { solanaAgent } from "@/utils/config";
-import { ParaSolanaWeb3Signer } from "@getpara/solana-web3.js-v1-integration";
-import { Connection } from "@solana/web3.js";
-import { Para as Paraserver,Environment } from "@getpara/server-sdk";
 import { z } from "zod";
-export const para = new Paraserver(process.env.PARA_ENV as Environment, process.env.PARA_API_KEY as string);
 
-// Set up Solana connection
-const solanaConnection = new Connection(process.env.RPC_URL as string);
-
-// Create the Para Solana Signer
-const solanaSigner = new ParaSolanaWeb3Signer(para, solanaConnection);
 
 // Initialize Groq with the mixtral model
 const groq = createGroq({

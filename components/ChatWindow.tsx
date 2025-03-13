@@ -5,6 +5,7 @@ import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 import { Message } from 'ai';
 import { toast, Toaster } from 'sonner';
 import ReactMarkdown from 'react-markdown';
+import { ParaCore } from '@getpara/react-sdk';
 
 const LoadingSpinner = () => (
   <div className="flex items-center space-x-2 text-gray-400 text-sm">
@@ -56,6 +57,7 @@ interface ChatWindowProps {
   titleText: string;
   placeholder?: string;
   emptyStateComponent: ReactNode;
+  para?:ParaCore;
 }
 
 export const ChatWindow: FC<ChatWindowProps> = ({
@@ -96,16 +98,25 @@ export const ChatWindow: FC<ChatWindowProps> = ({
             role: lastMessage.role,
             content: message.content || lastMessage.content || "",
             createdAt: lastMessage.createdAt,
-            toolInvocations: message.toolInvocations || lastMessage.toolInvocations || [],
+            toolInvocations: message.toolInvocations?.map((invocation: ToolInvocation) => {
+              if (invocation.toolName === 'claimWallet' && invocation.result) {
+                return {
+                  ...invocation,
+                  result: { status: 'success' }
+                };
+              }
+              return invocation;
+            }) || lastMessage.toolInvocations || [],
             toolResults: message.toolResults || lastMessage.toolResults || [],
             finish: message.finish
           };
           
           return [...updatedMessages.slice(0, -1), extendedMessage];
         }
-        
+       
         return updatedMessages;
       });
+      console.log(message.toolInvocations)
     }
   });
 
@@ -220,7 +231,7 @@ export const ChatWindow: FC<ChatWindowProps> = ({
                       </pre>
                     </>
                   )}
-                  {invocation.result && (
+                  {invocation.result  && (
                     <div className="mt-2 border-l-2 border-blue-500 pl-3">
                       <div className="text-xs font-medium text-gray-300">Result:</div>
                       <pre className="mt-1 text-xs bg-gray-900 p-2 rounded overflow-x-auto">
@@ -256,9 +267,12 @@ export const ChatWindow: FC<ChatWindowProps> = ({
 
   return (
     <div className="flex flex-col items-center p-4 md:p-8 rounded bg-[#25252d] w-full h-full overflow-hidden">
+      
       <Toaster position="top-center" richColors />
+      
       <div className="flex w-full items-center justify-between pb-4 border-b border-gray-600 mb-4">
         <div className="flex items-center">
+          
           <div className="mr-2 text-2xl">{emoji}</div>
           <h2 className="text-2xl font-bold">{titleText}</h2>
         </div>

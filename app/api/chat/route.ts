@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { Message,LanguageModelV1,streamText,tool } from "ai";
 import { createGroq } from "@ai-sdk/groq";
 import { createVercelAITools } from "solana-agent-kit";
-import { solanaAgent } from "@/utils/config";
+import { solanaAgent } from "@/utils/solana";
 import { z } from "zod";
 import ParaServerPlugin from "@uratmangun/solana-plugin-para-server";
 
@@ -11,21 +11,23 @@ const groq = createGroq({
   baseURL: "https://api.groq.com/openai/v1",
   apiKey: process.env.GROQ_API_KEY,
 });
-const solanaAgentWithPara = solanaAgent.use(ParaServerPlugin)
-const vercelTools = createVercelAITools(solanaAgentWithPara, solanaAgentWithPara.actions);
-const tools = {...vercelTools,
-  para:tool({
-    id:"para.para" as `${string}.${string}`,
-    description:"Para",
-    parameters: z.object({email:z.string()}),
-    execute: async (args: any, options: { abortSignal?: AbortSignal }) => {
-      return "Para"
-    }
-  })
-}
+
 export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json() as { messages: Message[] };
+    
+    const solanaAgentWithPara = solanaAgent.use(ParaServerPlugin);
+    const vercelTools = createVercelAITools(solanaAgentWithPara, solanaAgentWithPara.actions);
+    const tools = {...vercelTools,
+      claimWallet:tool({
+        id:"claim.wallet" as `${string}.${string}`,
+        description:"Claim your wallet",
+        parameters: z.object({email:z.string()}),
+        execute: async (args: any, options: { abortSignal?: AbortSignal }) => {
+          return "claim_para_wallet"
+        }
+      })
+    }
     const result = await streamText({
       model: groq("deepseek-r1-distill-llama-70b") as LanguageModelV1,
       tools:tools as any,
@@ -38,7 +40,7 @@ export async function POST(req: NextRequest) {
       themselves using the Solana Agent Kit, recommend they go to https://www.solanaagentkit.xyz for more information. Be
       concise and helpful with your responses. Refrain from restating your tools' descriptions unless it is explicitly requested.
     `,
-    messages
+      messages
     });
   
 

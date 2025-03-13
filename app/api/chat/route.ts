@@ -5,7 +5,7 @@ import { createVercelAITools } from "solana-agent-kit";
 import { solanaAgent } from "@/utils/solana";
 import { z } from "zod";
 import ParaServerPlugin from "@uratmangun/solana-plugin-para-server";
-
+import {createParaToolsWeb} from "@/utils/init"
 // Initialize Groq with the mixtral model
 const groq = createGroq({
   baseURL: "https://api.groq.com/openai/v1",
@@ -19,14 +19,7 @@ export async function POST(req: NextRequest) {
     const solanaAgentWithPara = solanaAgent.use(ParaServerPlugin);
     const vercelTools = createVercelAITools(solanaAgentWithPara, solanaAgentWithPara.actions);
     const tools = {...vercelTools,
-      claimWallet:tool({
-        id:"claim.wallet" as `${string}.${string}`,
-        description:"Claim your wallet",
-        parameters: z.object({email:z.string()}),
-        execute: async (args: any, options: { abortSignal?: AbortSignal }) => {
-          return "claim_para_wallet"
-        }
-      })
+      ...createParaToolsWeb()
     }
     const result = await streamText({
       model: groq("deepseek-r1-distill-llama-70b") as LanguageModelV1,

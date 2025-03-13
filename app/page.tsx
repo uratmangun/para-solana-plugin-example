@@ -11,7 +11,6 @@ import { useEffect, useState } from "react";
 export default function ChatbotPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
-  const [wallet, setWallet] = useState("");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   
@@ -25,12 +24,7 @@ export default function ChatbotPage() {
     try {
       const isAuthenticated = await para.isFullyLoggedIn();
       setIsConnected(isAuthenticated);
-      if (isAuthenticated) {
-        const wallets = Object.values(await para.getWallets());
-        if (wallets?.length) {
-          setWallet(wallets[0].address || "unknown");
-        }
-      }
+      
     } catch (err: any) {
       setError(err.message || "An error occurred during authentication");
     }

@@ -87,7 +87,7 @@ export const ChatWindow: FC<ChatWindowProps> = ({
         toast.error(`HTTP error! status: ${response.status}`);
       }
     },
-    onFinish: (message: any) => {
+    onFinish: async (message: any) => {
       setMessages(prevMessages => {
         const updatedMessages = [...prevMessages];
         const lastMessage = updatedMessages[updatedMessages.length - 1];
@@ -98,30 +98,7 @@ export const ChatWindow: FC<ChatWindowProps> = ({
             role: lastMessage.role,
             content: message.content || lastMessage.content || "",
             createdAt: lastMessage.createdAt,
-            toolInvocations: message.toolInvocations?.map(async(invocation: ToolInvocation) => {
-              if (invocation.toolName === 'GET_ALL_WALLETS' && invocation.result) {
-              
-                try {
-                  const para = solanaAgentWithPara.methods.getParaInstance();
-                  const isLoggedIn =await para.isFullyLoggedIn();
-                  if(!isLoggedIn){
-                    console.log("Please login to Para to get wallets.");
-                  }
-                  const wallets = await solanaAgentWithPara.methods.getAllWallets();
-                  console.log(wallets)
-                  return {
-                    ...invocation,
-                    result: { status: 'success', wallets }
-                  };
-                } catch (error) {
-                  return {
-                    ...invocation,
-                    result: { status: 'error', message: (error as Error).message }
-                  };
-                }
-              }
-              return invocation;
-            }) || lastMessage.toolInvocations || [],
+            toolInvocations: lastMessage.toolInvocations || [],
             toolResults: message.toolResults || lastMessage.toolResults || [],
             finish: message.finish
           };
@@ -131,7 +108,48 @@ export const ChatWindow: FC<ChatWindowProps> = ({
        
         return updatedMessages;
       });
-      console.log(message.toolInvocations)
+
+      // Handle async tool invocations separately
+      if (message.toolInvocations?.length > 0) {
+        const processedInvocations = await Promise.all(
+          message.toolInvocations.map(async (invocation: ToolInvocation) => {
+            if (invocation.toolName === 'GET_ALL_WALLETS') {
+              try {
+                
+                const wallets = await solanaAgentWithPara.methods.getAllWallets();
+                console.log(wallets);
+                return {
+                  ...invocation,
+                  result: { status: 'success', wallets }
+                };
+              } catch (error) {
+                return {
+                  ...invocation,
+                  result: { status: 'error', message: (error as Error).message }
+                };
+              }
+            }
+            return invocation;
+          })
+        );
+
+        setMessages(prevMessages => {
+          const updatedMessages = [...prevMessages];
+          const lastMessage = updatedMessages[updatedMessages.length - 1];
+          
+          if (lastMessage) {
+            const extendedMessage: ExtendedMessage = {
+              ...lastMessage,
+              toolInvocations: processedInvocations
+            };
+            
+            return [...updatedMessages.slice(0, -1), extendedMessage];
+          }
+          
+          return updatedMessages;
+        });
+      }
+      console.log(message.toolInvocations);
     }
   });
 

@@ -34,8 +34,7 @@ export default function ChatbotPage() {
   useEffect(() => {
     if (!para) return;
     const initialize = async () => {
-      await para.logout();
-      handleCheckIfAuthenticated();
+        handleCheckIfAuthenticated();
     };
     initialize();
   }, [para]);
@@ -85,7 +84,7 @@ export default function ChatbotPage() {
         {!isConnected && <button onClick={handleOpenModal} className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
           Login
         </button>}
-        {isConnected && <button onClick={handleLogout} className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+        {isConnected && <button onClick={handleLogout} className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700">
           Logout
         </button>}
         <ParaModal

@@ -6,7 +6,7 @@ import { Message } from 'ai';
 import { toast, Toaster } from 'sonner';
 import ReactMarkdown from 'react-markdown';
 import { ParaCore } from '@getpara/react-sdk';
-
+import {solanaAgentWithPara} from '@/utils/init'
 const LoadingSpinner = () => (
   <div className="flex items-center space-x-2 text-gray-400 text-sm">
     <div className="animate-spin rounded-full h-4 w-4 border-2 border-b-transparent border-gray-400"></div>
@@ -98,12 +98,27 @@ export const ChatWindow: FC<ChatWindowProps> = ({
             role: lastMessage.role,
             content: message.content || lastMessage.content || "",
             createdAt: lastMessage.createdAt,
-            toolInvocations: message.toolInvocations?.map((invocation: ToolInvocation) => {
-              if (invocation.toolName === 'claimWallet' && invocation.result) {
-                return {
-                  ...invocation,
-                  result: { status: 'success' }
-                };
+            toolInvocations: message.toolInvocations?.map(async(invocation: ToolInvocation) => {
+              if (invocation.toolName === 'GET_ALL_WALLETS' && invocation.result) {
+              
+                try {
+                  const para = solanaAgentWithPara.methods.getParaInstance();
+                  const isLoggedIn =await para.isFullyLoggedIn();
+                  if(!isLoggedIn){
+                    console.log("Please login to Para to get wallets.");
+                  }
+                  const wallets = await solanaAgentWithPara.methods.getAllWallets();
+                  console.log(wallets)
+                  return {
+                    ...invocation,
+                    result: { status: 'success', wallets }
+                  };
+                } catch (error) {
+                  return {
+                    ...invocation,
+                    result: { status: 'error', message: (error as Error).message }
+                  };
+                }
               }
               return invocation;
             }) || lastMessage.toolInvocations || [],

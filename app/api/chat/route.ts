@@ -3,9 +3,8 @@ import { Message,LanguageModelV1,streamText,tool } from "ai";
 import { createGroq } from "@ai-sdk/groq";
 import { createVercelAITools } from "solana-agent-kit";
 import { solanaAgent } from "@/utils/solana";
-import { z } from "zod";
 import ParaServerPlugin from "@uratmangun/solana-plugin-para-server";
-import {createParaToolsWeb} from "@/utils/init"
+import {listParaToolsWeb} from "@/utils/get_all_tools"
 // Initialize Groq with the mixtral model
 const groq = createGroq({
   baseURL: "https://api.groq.com/openai/v1",
@@ -18,11 +17,13 @@ export async function POST(req: NextRequest) {
     
     const solanaAgentWithPara = solanaAgent.use(ParaServerPlugin);
     const vercelTools = createVercelAITools(solanaAgentWithPara, solanaAgentWithPara.actions);
+    const webTools = await listParaToolsWeb()
+    
     const tools = {...vercelTools,
-      ...createParaToolsWeb()
+     ...webTools
     }
     const result = await streamText({
-      model: groq("deepseek-r1-distill-llama-70b") as LanguageModelV1,
+      model: groq("llama-3.1-8b-instant") as LanguageModelV1,
       tools:tools as any,
       system: `
       You are a helpful agent that can interact onchain using the Solana Agent Kit. You are

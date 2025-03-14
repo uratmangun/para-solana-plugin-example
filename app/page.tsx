@@ -13,7 +13,7 @@ export default function ChatbotPage() {
   const [isConnected, setIsConnected] = useState(false);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  
+   const [email, setEmail] = useState("");
 
  
 
@@ -24,7 +24,8 @@ export default function ChatbotPage() {
     try {
       const isAuthenticated = await para.isFullyLoggedIn();
       setIsConnected(isAuthenticated);
-      
+      const user = await para.getEmail();
+      setEmail(user as string);
     } catch (err: any) {
       setError(err.message || "An error occurred during authentication");
     }
@@ -81,6 +82,7 @@ export default function ChatbotPage() {
   return (
     <div className="flex flex-col h-full">
       <div className="flex justify-end p-4">
+      <span className="flex items-center justify-center mr-4">{email}</span>
         {!isConnected && <button onClick={handleOpenModal} className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
           Login
         </button>}
@@ -118,7 +120,7 @@ export default function ChatbotPage() {
         titleText="Solana Agent Chatbot"
         placeholder="Ask me anything about Solana..."
         emptyStateComponent={InfoCard}
-        para={para}
+      
       />
     </div>
   );

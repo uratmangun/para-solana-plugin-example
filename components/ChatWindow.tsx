@@ -117,10 +117,42 @@ export const ChatWindow: FC<ChatWindowProps> = ({
               try {
                 
                 const wallets = await solanaAgentWithPara.methods.getAllWallets();
-                console.log(wallets);
                 return {
                   ...invocation,
                   result: { status: 'success', wallets }
+                };
+              } catch (error) {
+                return {
+                  ...invocation,
+                  result: { status: 'error', message: (error as Error).message }
+                };
+              }
+            }
+            //  
+            if (invocation.toolName === 'CLAIM_PARA_PREGEN_WALLET') {
+              try {
+                
+                const response = await solanaAgentWithPara.methods.claimParaPregenWallet(invocation.args?.email as string);
+                console.log(response);
+                return {
+                  ...invocation,
+                  result: { status: 'success', ...response }
+                };
+              } catch (error) {
+                return {
+                  ...invocation,
+                  result: { status: 'error', message: (error as Error).message }
+                };
+              }
+            }
+            if (invocation.toolName === 'USE_WALLET') {
+              try {
+                
+                const response = await solanaAgentWithPara.methods.useWallet(solanaAgentWithPara,invocation.args?.walletId as string);
+                console.log(response);
+                return {
+                  ...invocation,
+                  result: { status: 'success', ...response }
                 };
               } catch (error) {
                 return {

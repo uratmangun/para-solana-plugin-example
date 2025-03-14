@@ -32,6 +32,7 @@
 		"@types/react-dom": "18.3.0",
 		"@uratmangun/solana-plugin-para-server": "file:../solana-plugin-para/packages/plugin-para-server",
 		"@uratmangun/solana-plugin-para-web": "file:../solana-plugin-para/packages/plugin-para-web",
+		"@solana-agent-kit/plugin-token": "file:../michael-v2/packages/plugin-token",
 		"ai": "^3.4.33",
 		"assert": "^2.1.0",
 		"autoprefixer": "10.4.14",

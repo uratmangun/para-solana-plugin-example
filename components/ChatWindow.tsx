@@ -7,7 +7,7 @@ import { toast, Toaster } from 'sonner';
 import ReactMarkdown from 'react-markdown';
 import { ParaCore } from '@getpara/react-sdk';
 import {solanaAgentWithPara} from '@/utils/init'
-import { useWallet } from '@/utils/use_wallet';
+import { getUserShareWeb } from '@/utils/get_user_share';
 
 const LoadingSpinner = () => (
   <div className="flex items-center space-x-2 text-gray-400 text-sm">
@@ -152,7 +152,7 @@ export const ChatWindow: FC<ChatWindowProps> = ({
               
               try {
                 // Pass empty object cast to SolanaAgentKit as first parameter since it will be replaced by the bound agent
-                const response = await useWallet(para as any, invocation.args?.walletId as string);
+                const response = await getUserShareWeb(para as any, invocation.args?.walletId as string);
                 
                 // console.log(response);
                 return {

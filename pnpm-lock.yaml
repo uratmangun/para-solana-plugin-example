@@ -17,6 +17,9 @@ importers:
       '@getpara/react-sdk':
         specifier: ^1.5.0
         version: 1.5.0(@emotion/is-prop-valid@1.2.2)(@types/react@18.3.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@getpara/solana-web3.js-v1-integration':
+        specifier: ^1.5.1
+        version: 1.5.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       '@getpara/web-sdk':
         specifier: ^1.5.0
         version: 1.5.0
@@ -466,6 +469,9 @@ packages:
   '@getpara/core-sdk@1.5.0':
     resolution: {integrity: sha512-yNLohWkNEUloph+XpcMQPRG2Wa9U2D/HS7DM1Toxi6yB8FcGq6v72ZQd1mDA0Vvy2TUmDBvyqOh+Lxd546m8vw==}
 
+  '@getpara/core-sdk@1.5.1':
+    resolution: {integrity: sha512-PsuCZOMailJ3L7R7So7J5DYa+AmoNqfA6Ib8LhW1/NNinZ/e/+nObKbDg4qHtlZOKQGHpBIV4jqmopzkL1WHWg==}
+
   '@getpara/react-common@1.5.0':
     resolution: {integrity: sha512-Rg8KgRinWutCQjlQQYXkIVxjVAZ8sAfzoAJWTYaR03EO2+ZXACsPGTyBdsFDHKJD/KaHNIOYfDdxyVlN1Bh/Sw==}
     peerDependencies:
@@ -484,11 +490,14 @@ packages:
   '@getpara/server-sdk@1.5.0':
     resolution: {integrity: sha512-n9pHcAU856Bb5tMxCC5TWQ6i037snjlAkzyPlXK2dJTG/GOCK1EkM+wsMPd+kJvC2BWF+xrDBUxilWXGKn3Wgw==}
 
-  '@getpara/solana-web3.js-v1-integration@1.5.0':
-    resolution: {integrity: sha512-m/sru/dOr2Zcrwkl1Ve7LGWRAKbHU4POlQLq8Q5sdEV6QxzPsCZmt/YZDPcMH7kh5s7simcPsv63SFjsQwVJDw==}
+  '@getpara/solana-web3.js-v1-integration@1.5.1':
+    resolution: {integrity: sha512-GKKOq4cJ3Kp0HrKObH/J2ZdcsC6DNTz2AazfM2OUjp5DwK+IOdu7lS3yScvYCQuJCdKSMJ6fjjqDJHGXFwg+1g==}
 
   '@getpara/user-management-client@1.5.0':
     resolution: {integrity: sha512-7RwtOtVBg31wNH36NvxgCR1tnVlCA5VG7G1pw49iY0G/UcquklhML5RKlD29n3+OCiIFTuwtB/dSF5D/2VMddQ==}
+
+  '@getpara/user-management-client@1.5.1':
+    resolution: {integrity: sha512-Vs8/jQZpUMaU/rWUw0jCd47/QNxiaONbTwCjSW8ICFMnbukIAYebuwTimodsDPBDBbQJdmthP7gv9HArciUVyg==}
 
   '@getpara/web-sdk@1.5.0':
     resolution: {integrity: sha512-8/QNaHiCxQ+ZxLHVP7DjgZk/6fUUtAnNHR1NeWGoF2W/25ty9QUw3QYmm23ULvshqgN/EoIhGQQUFRVOhiRa5g==}
@@ -5393,6 +5402,20 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@getpara/core-sdk@1.5.1':
+    dependencies:
+      '@celo/utils': 8.0.1
+      '@cosmjs/encoding': 0.32.4
+      '@getpara/user-management-client': 1.5.1
+      '@noble/hashes': 1.6.1
+      base64url: 3.0.1
+      ethereumjs-util: 7.1.5
+      libphonenumber-js: 1.11.2
+      node-forge: 1.3.1
+      qs: 6.14.0
+    transitivePeerDependencies:
+      - debug
+
   '@getpara/react-common@1.5.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@getpara/react-components': 1.5.0
@@ -5448,9 +5471,9 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@getpara/solana-web3.js-v1-integration@1.5.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@getpara/solana-web3.js-v1-integration@1.5.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
     dependencies:
-      '@getpara/core-sdk': 1.5.0
+      '@getpara/core-sdk': 1.5.1
       '@solana/web3.js': 1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
@@ -5459,6 +5482,14 @@ snapshots:
       - utf-8-validate
 
   '@getpara/user-management-client@1.5.0':
+    dependencies:
+      axios: 1.8.2
+      libphonenumber-js: 1.11.2
+      qs: 6.14.0
+    transitivePeerDependencies:
+      - debug
+
+  '@getpara/user-management-client@1.5.1':
     dependencies:
       axios: 1.8.2
       libphonenumber-js: 1.11.2
@@ -6417,7 +6448,7 @@ snapshots:
 
   '@solana-agent-kit/plugin-para-web@file:../solana-plugin-para/packages/plugin-para-web(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)':
     dependencies:
-      '@getpara/solana-web3.js-v1-integration': 1.5.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@getpara/solana-web3.js-v1-integration': 1.5.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       '@getpara/web-sdk': 1.5.0
       '@solana/web3.js': 1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       bs58: 6.0.0
@@ -7645,7 +7676,7 @@ snapshots:
       eslint: 8.46.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0(eslint@8.46.0))(eslint@8.46.0)
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.46.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.7.0)(eslint@8.46.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.46.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(eslint@8.46.0))(eslint@8.46.0))(eslint@8.46.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.46.0)
       eslint-plugin-react: 7.37.3(eslint@8.46.0)
       eslint-plugin-react-hooks: 5.0.0-canary-7118f5dd7-20230705(eslint@8.46.0)
@@ -7676,7 +7707,7 @@ snapshots:
       is-glob: 4.0.3
       stable-hash: 0.0.4
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.46.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.7.0)(eslint@8.46.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.46.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(eslint@8.46.0))(eslint@8.46.0))(eslint@8.46.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -7691,7 +7722,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.46.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.7.0)(eslint@8.46.0):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.46.0)(typescript@5.1.6))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(eslint@8.46.0))(eslint@8.46.0))(eslint@8.46.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8

@@ -7,6 +7,8 @@ import { toast, Toaster } from 'sonner';
 import ReactMarkdown from 'react-markdown';
 import { ParaCore } from '@getpara/react-sdk';
 import {solanaAgentWithPara} from '@/utils/init'
+import { useWallet } from '@/utils/use_wallet';
+
 const LoadingSpinner = () => (
   <div className="flex items-center space-x-2 text-gray-400 text-sm">
     <div className="animate-spin rounded-full h-4 w-4 border-2 border-b-transparent border-gray-400"></div>
@@ -66,6 +68,7 @@ export const ChatWindow: FC<ChatWindowProps> = ({
   titleText,
   placeholder = "Send a message...",
   emptyStateComponent,
+  para
 }) => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [messages, setMessages] = useState<ExtendedMessage[]>([]);
@@ -146,15 +149,18 @@ export const ChatWindow: FC<ChatWindowProps> = ({
               }
             }
             if (invocation.toolName === 'USE_WALLET') {
+              
               try {
+                // Pass empty object cast to SolanaAgentKit as first parameter since it will be replaced by the bound agent
+                const response = await useWallet(para as any, invocation.args?.walletId as string);
                 
-                const response = await solanaAgentWithPara.methods.useWallet(solanaAgentWithPara,invocation.args?.walletId as string);
-                console.log(response);
+                // console.log(response);
                 return {
                   ...invocation,
                   result: { status: 'success', ...response }
                 };
               } catch (error) {
+                console.log(error);
                 return {
                   ...invocation,
                   result: { status: 'error', message: (error as Error).message }

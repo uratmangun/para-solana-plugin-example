@@ -2,7 +2,7 @@ import { SolanaAgentKit, type BaseWallet } from "solana-agent-kit";
 
 
 // Create the Solana Agent
-export const solanaAgent = new SolanaAgentKit(
+export let solanaAgent = new SolanaAgentKit(
   {} as BaseWallet, // Temporary wallet, will be replaced
   process.env.NEXT_PUBLIC_RPC_URL as string,
   {

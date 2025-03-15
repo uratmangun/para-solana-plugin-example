@@ -120,7 +120,7 @@ export default function ChatbotPage() {
         titleText="Solana Agent Chatbot"
         placeholder="Ask me anything about Solana..."
         emptyStateComponent={InfoCard}
-      
+      para={para}
       />
     </div>
   );

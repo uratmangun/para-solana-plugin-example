@@ -4,6 +4,7 @@ import { createGroq } from "@ai-sdk/groq";
 import { createVercelAITools } from "solana-agent-kit";
 import { solanaAgent } from "@/utils/solana";
 import ParaServerPlugin from "@uratmangun/solana-plugin-para-server";
+import TokenPlugin from "@solana-agent-kit/plugin-token";
 import {listParaToolsWeb} from "@/utils/get_all_tools"
 // Initialize Groq with the mixtral model
 const groq = createGroq({
@@ -15,9 +16,9 @@ export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json() as { messages: Message[] };
     
-    const solanaAgentWithPara = solanaAgent.use(ParaServerPlugin);
+    const solanaAgentWithPara = solanaAgent.use(ParaServerPlugin).use(TokenPlugin);
     const vercelTools = createVercelAITools(solanaAgentWithPara, solanaAgentWithPara.actions);
-    const webTools = await listParaToolsWeb()
+    const webTools = listParaToolsWeb()
     
     const tools = {...vercelTools,
      ...webTools

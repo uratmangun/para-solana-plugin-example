@@ -7,7 +7,7 @@ import { toast, Toaster } from 'sonner';
 import ReactMarkdown from 'react-markdown';
 import { ParaCore } from '@getpara/react-sdk';
 import {solanaAgentWithPara} from '@/utils/init'
-import { getUserShareWeb } from '@/utils/get_user_share';
+import { useWalletWeb } from '@/utils/use_wallet';
 
 const LoadingSpinner = () => (
   <div className="flex items-center space-x-2 text-gray-400 text-sm">
@@ -134,25 +134,27 @@ export const ChatWindow: FC<ChatWindowProps> = ({
             //  
             if (invocation.toolName === 'CLAIM_PARA_PREGEN_WALLET') {
               try {
-                
-                const response = await solanaAgentWithPara.methods.claimParaPregenWallet(invocation.args?.email as string);
-                console.log(response);
+                const response=await solanaAgentWithPara.methods.claimParaPregenWallet();
+            
                 return {
                   ...invocation,
                   result: { status: 'success', ...response }
                 };
               } catch (error) {
-                return {
-                  ...invocation,
-                  result: { status: 'error', message: (error as Error).message }
-                };
+            
+                  return {
+                    ...invocation,
+                    result: { status: 'error', message: (error as Error).message }
+                  };
+              
+                
               }
             }
             if (invocation.toolName === 'USE_WALLET') {
               
               try {
                 // Pass empty object cast to SolanaAgentKit as first parameter since it will be replaced by the bound agent
-                const response = await getUserShareWeb(para as any, invocation.args?.walletId as string);
+                const response = await useWalletWeb(invocation.args?.walletId as string);
                 
                 // console.log(response);
                 return {

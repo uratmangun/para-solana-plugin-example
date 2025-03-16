@@ -14,6 +14,12 @@ importers:
       '@ai-sdk/openai':
         specifier: ^1.2.5
         version: 1.2.5(zod@3.24.1)
+      '@getpara/plugin-para-server':
+        specifier: npm:@uratmangun/plugin-para-server@^2.0.1
+        version: '@uratmangun/plugin-para-server@2.0.1(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)'
+      '@getpara/plugin-para-web':
+        specifier: npm:@uratmangun/plugin-para-web@^2.0.2
+        version: '@uratmangun/plugin-para-web@2.0.2(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)'
       '@getpara/react-sdk':
         specifier: ^1.5.0
         version: 1.5.0(@emotion/is-prop-valid@1.2.2)(@types/react@18.3.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -25,7 +31,7 @@ importers:
         version: 1.5.0
       '@langchain/community':
         specifier: ^0.3.11
-        version: 0.3.20(@browserbasehq/sdk@2.3.0)(@browserbasehq/stagehand@1.8.0(@playwright/test@1.49.1)(bufferutil@4.0.8)(deepmerge@4.3.1)(dotenv@16.4.7)(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))(utf-8-validate@5.0.10)(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/core@0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)))(@langchain/groq@0.1.2(@langchain/core@0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)))(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)))(@supabase/supabase-js@2.47.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(axios@1.7.4)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsdom@25.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10))(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))(playwright@1.49.1)(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))
+        version: 0.3.20(@browserbasehq/sdk@2.3.0)(@browserbasehq/stagehand@1.8.0(@playwright/test@1.49.1)(bufferutil@4.0.8)(deepmerge@4.3.1)(dotenv@16.4.7)(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))(utf-8-validate@5.0.10)(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/core@0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)))(@langchain/groq@0.1.2(@langchain/core@0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)))(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)))(@supabase/supabase-js@2.47.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(axios@1.7.4)(crypto-js@4.2.0)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsdom@25.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10))(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))(playwright@1.49.1)(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))
       '@langchain/core':
         specifier: ^0.3.17
         version: 0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))
@@ -42,8 +48,8 @@ importers:
         specifier: ^1.1.2
         version: 1.1.2(@types/react@18.3.2)(react@19.0.0)
       '@solana-agent-kit/plugin-token':
-        specifier: file:../michael-v2/packages/plugin-token
-        version: file:../michael-v2/packages/plugin-token(@noble/hashes@1.6.1)(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(fastestsmallesttextencoderdecoder@1.0.22)(solana-agent-kit@file:../michael-v2/packages/core(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10))(typescript@5.1.6)(utf-8-validate@5.0.10)
+        specifier: npm:@uratmangun/plugin-token@^2.0.2
+        version: '@uratmangun/plugin-token@2.0.2(@noble/hashes@1.6.1)(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(@uratmangun/solana-agent-kit@2.0.2(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.1.6)(utf-8-validate@5.0.10)'
       '@solana/web3.js':
         specifier: ^1.98.0
         version: 1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
@@ -52,7 +58,7 @@ importers:
         version: 2.47.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       '@tailwindcss/typography':
         specifier: ^0.5.15
-        version: 0.5.15(tailwindcss@3.3.3)
+        version: 0.5.15(tailwindcss@3.3.3(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.1.6)))
       '@types/node':
         specifier: 20.12.12
         version: 20.12.12
@@ -62,12 +68,6 @@ importers:
       '@types/react-dom':
         specifier: 18.3.0
         version: 18.3.0
-      '@uratmangun/solana-plugin-para-server':
-        specifier: file:../solana-plugin-para/packages/plugin-para-server
-        version: '@solana-agent-kit/plugin-para-server@file:../solana-plugin-para/packages/plugin-para-server(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)'
-      '@uratmangun/solana-plugin-para-web':
-        specifier: file:../solana-plugin-para/packages/plugin-para-web
-        version: '@solana-agent-kit/plugin-para-web@file:../solana-plugin-para/packages/plugin-para-web(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)'
       ai:
         specifier: ^3.4.33
         version: 3.4.33(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))(react@19.0.0)(sswr@2.1.0(svelte@5.16.0))(svelte@5.16.0)(vue@3.5.13(typescript@5.1.6))(zod@3.24.1)
@@ -95,6 +95,9 @@ importers:
       isomorphic-dompurify:
         specifier: ^2.19.0
         version: 2.19.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      ky:
+        specifier: ^1.7.5
+        version: 1.7.5
       langchain:
         specifier: ^0.3.5
         version: 0.3.8(@langchain/core@0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)))(@langchain/groq@0.1.2(@langchain/core@0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)))(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)))(axios@1.7.4)(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))
@@ -123,8 +126,8 @@ importers:
         specifier: ^9.1.3
         version: 9.1.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       solana-agent-kit:
-        specifier: file:../michael-v2/packages/core
-        version: file:../michael-v2/packages/core(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)
+        specifier: npm:@uratmangun/solana-agent-kit@^2.0.2
+        version: '@uratmangun/solana-agent-kit@2.0.2(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)'
       sonner:
         specifier: ^2.0.1
         version: 2.0.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -133,10 +136,10 @@ importers:
         version: 3.0.2
       tailwindcss:
         specifier: 3.3.3
-        version: 3.3.3
+        version: 3.3.3(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.1.6))
       tailwindcss-animate:
         specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.3.3)
+        version: 1.0.7(tailwindcss@3.3.3(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.1.6)))
       typescript:
         specifier: 5.1.6
         version: 5.1.6
@@ -361,6 +364,10 @@ packages:
   '@cosmjs/encoding@0.32.4':
     resolution: {integrity: sha512-tjvaEy6ZGxJchiizzTn7HVRiyTg1i4CObRRaTRPknm5EalE13SV+TCHq38gIDfyUeden4fCuaBVEdBR5+ti7Hw==}
 
+  '@cspotcode/source-map-support@0.8.1':
+    resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
+    engines: {node: '>=12'}
+
   '@emnapi/runtime@1.3.1':
     resolution: {integrity: sha512-kEBmG8KyqtxJZv+ygbEim+KCGtIq1fC22Ms3S4ziXmYKm8uyoLX0MHONVKwp+9opg390VaKRNt4a7A9NwmpNhw==}
 
@@ -487,8 +494,8 @@ packages:
       react: '*'
       react-dom: '*'
 
-  '@getpara/server-sdk@1.5.0':
-    resolution: {integrity: sha512-n9pHcAU856Bb5tMxCC5TWQ6i037snjlAkzyPlXK2dJTG/GOCK1EkM+wsMPd+kJvC2BWF+xrDBUxilWXGKn3Wgw==}
+  '@getpara/server-sdk@1.5.1':
+    resolution: {integrity: sha512-BxXKfbRAfnINuLMtLZseFkFQQ4JWr54jRU9yaPfV2jkFbocYUwwDiCzov5gMUfBGI0NvJxl4GFUw0nG135qnaA==}
 
   '@getpara/solana-web3.js-v1-integration@1.5.1':
     resolution: {integrity: sha512-GKKOq4cJ3Kp0HrKObH/J2ZdcsC6DNTz2AazfM2OUjp5DwK+IOdu7lS3yScvYCQuJCdKSMJ6fjjqDJHGXFwg+1g==}
@@ -670,6 +677,9 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@jridgewell/trace-mapping@0.3.9':
+    resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
   '@jup-ag/api@6.0.40':
     resolution: {integrity: sha512-iHDOY5YiCnt+XvqCoiPTKcYWIpAY7nmeo3Rsr1Cx2sdjgqTRjqNsYtLLvjTOO33pemVz5h+U0GaU2vc9zeyjew==}
@@ -1643,22 +1653,6 @@ packages:
       '@opentelemetry/sdk-trace-base': ^1.30.1
       '@opentelemetry/semantic-conventions': ^1.28.0
 
-  '@solana-agent-kit/plugin-para-server@file:../solana-plugin-para/packages/plugin-para-server':
-    resolution: {directory: ../solana-plugin-para/packages/plugin-para-server, type: directory}
-    peerDependencies:
-      '@solana/web3.js': ^1.98.0
-
-  '@solana-agent-kit/plugin-para-web@file:../solana-plugin-para/packages/plugin-para-web':
-    resolution: {directory: ../solana-plugin-para/packages/plugin-para-web, type: directory}
-    peerDependencies:
-      '@solana/web3.js': ^1.98.0
-
-  '@solana-agent-kit/plugin-token@file:../michael-v2/packages/plugin-token':
-    resolution: {directory: ../michael-v2/packages/plugin-token, type: directory}
-    peerDependencies:
-      '@solana/web3.js': ^1.98.0
-      solana-agent-kit: 2.0.0-beta.1
-
   '@solana/buffer-layout-utils@0.2.0':
     resolution: {integrity: sha512-szG4sxgJGktbuZYDg2FfNmkMi0DYQoVjN2h7ta1W1hPrwzarcFLBq9UpX1UjNXsNpT9dn+chgprtWGioUAr4/g==}
     engines: {node: '>= 10'}
@@ -1785,6 +1779,18 @@ packages:
 
   '@tokenizer/token@0.3.0':
     resolution: {integrity: sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==}
+
+  '@tsconfig/node10@1.0.11':
+    resolution: {integrity: sha512-DcRjDCujK/kCk/cUe8Xz8ZSpm8mS3mNNpta+jGCA6USEDfktlNvm1+IuZ9eTcDbNk41BHwpHHeW+N1lKCz4zOw==}
+
+  '@tsconfig/node12@1.0.11':
+    resolution: {integrity: sha512-cqefuRsh12pWyGsIoBKJA9luFu3mRxCA+ORZvA4ktLSzIuCUtWVxGIuXigEwO5/ywWFMZ2QEGKWvkZG1zDMTag==}
+
+  '@tsconfig/node14@1.0.3':
+    resolution: {integrity: sha512-ysT8mhdixWK6Hw3i1V2AeRqZ5WfXg1G43mqoYlM2nc6388Fq5jcXyr5mRsqViLx/GJYdoL0bfXD8nmF+Zn/Iow==}
+
+  '@tsconfig/node16@1.0.4':
+    resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
 
   '@types/bn.js@5.1.6':
     resolution: {integrity: sha512-Xh8vSwUeMKeYYrj3cX4lGQgFSF/N03r+tv4AiLl1SucqV+uTQpxRcnM8AkXKHwYP9ZPXOYXRr2KPXpVlIvqh9w==}
@@ -1937,6 +1943,26 @@ packages:
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
 
+  '@uratmangun/plugin-para-server@2.0.1':
+    resolution: {integrity: sha512-EbQLwViL9hyb6rraYSCUvVBsuSQReRuL22DXdV+F+VlX303j0yhmF2FRGul/ODSgThfqt9RegQev3COaZAhLdQ==}
+    peerDependencies:
+      '@solana/web3.js': ^1.98.0
+
+  '@uratmangun/plugin-para-web@2.0.2':
+    resolution: {integrity: sha512-gEi7UCLTsZgoLKjJ22PWRJMNckPPvA6zpIEZUCqj2YCOthE+4SFeOdED8f/r4jeFTSxJMxR01JXSaZioZ12ABQ==}
+    peerDependencies:
+      '@solana/web3.js': ^1.98.0
+
+  '@uratmangun/plugin-token@2.0.2':
+    resolution: {integrity: sha512-Lzeh2XbNnANz2ACFbah2mc0DCB79tFr+xRdiG/RSGw0rxhUbURSyvTH1mI5AhcFiNnz5t7IWUPJK3/j/iBNlWw==}
+    peerDependencies:
+      '@solana/web3.js': ^1.98.0
+      solana-agent-kit: 2.0.0-beta.1
+
+  '@uratmangun/solana-agent-kit@2.0.2':
+    resolution: {integrity: sha512-iAlmNiRGlSppkFW5McmEGTg36dDLJ5raaN8OGSOtvnzKmLjmcbW7CoOAQgvP1H0vQLu8Eg7g2JapG+BBIWd/3A==}
+    engines: {node: '>=22.0.0', pnpm: '>=8.0.0'}
+
   '@vue/compiler-core@3.5.13':
     resolution: {integrity: sha512-oOdAkwqUfW1WqpwSYJce06wvt6HljgY3fGeM9NcVA1HaYOij3mZG9Rkysn0OHuyUAGMbEbARIpsG+LPVlBJ5/Q==}
 
@@ -2080,6 +2106,9 @@ packages:
   anymatch@3.1.3:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
     engines: {node: '>= 8'}
+
+  arg@4.1.3:
+    resolution: {integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==}
 
   arg@5.0.2:
     resolution: {integrity: sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==}
@@ -2426,12 +2455,18 @@ packages:
   create-hmac@1.1.7:
     resolution: {integrity: sha512-MJG9liiZ+ogc4TzUwuvbER1JRdgvUFSB5+VR/g5h82fGaIRWMWddtKBHi7/sVhfjQZ6SehlyhvQYrcYkaUIpLg==}
 
+  create-require@1.1.1:
+    resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
+
   cross-fetch@3.2.0:
     resolution: {integrity: sha512-Q+xVJLoGOeIMXZmbUK4HYk+69cQH6LudR0Vu/pRm2YlU/hDV9CiS0gKUMaWY5f2NeUH9C1nV3bsTlCo0FsTV1Q==}
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
+
+  crypto-js@4.2.0:
+    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
 
   css-color-keywords@1.0.0:
     resolution: {integrity: sha512-FyyrDHZKEjXDpNJYvVsV960FiqQyXc/LlYmsxl2BcdMb2WPx0OGRVgTg55rPSyLSNMqP52R9r8geSp7apN3Ofg==}
@@ -2543,6 +2578,10 @@ packages:
 
   diff-match-patch@1.0.5:
     resolution: {integrity: sha512-IayShXAgj/QMXgB0IWmKx+rOPuGMhqm5w6jvFxmVenXKIzRqTAAsbBPT3kWQeGANj3jGgvcvv4yK6SxqYmikgw==}
+
+  diff@4.0.2:
+    resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
+    engines: {node: '>=0.3.1'}
 
   dijkstrajs@1.0.3:
     resolution: {integrity: sha512-qiSlmBq9+BCdCA/L46dw8Uy93mloxsPSbwnm5yrKn2vMPiy8KyAskTF6zuV/j5BMsmOGZDPs7KjU+mjb670kfA==}
@@ -3411,6 +3450,10 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
+  ky@1.7.5:
+    resolution: {integrity: sha512-HzhziW6sc5m0pwi5M196+7cEBtbt0lCYi67wNsiwMUmz833wloE0gbzJPWKs1gliFKQb34huItDQX97LyOdPdA==}
+    engines: {node: '>=18'}
+
   langchain@0.3.8:
     resolution: {integrity: sha512-EiAHFgBdThuXFmIx9j81wjdPItpRsw0Ck4r5dyhB74gyhehRGna/UK2CTqeKVnIUM/f4g4JbxUgAU4voXljDMw==}
     engines: {node: '>=18'}
@@ -3548,6 +3591,9 @@ packages:
 
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
+
+  make-error@1.3.6:
+    resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
 
   map-obj@5.0.0:
     resolution: {integrity: sha512-2L3MIgJynYrZ3TYMriLDLWocz15okFakV6J12HXvMXDHui2x/zgChzg1u9mFFGbbGWE+GsLpQByt4POb9Or+uA==}
@@ -3946,8 +3992,8 @@ packages:
     resolution: {integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==}
     engines: {node: '>=4.0.0'}
 
-  pg-protocol@1.7.1:
-    resolution: {integrity: sha512-gjTHWGYWsEgy9MsY0Gp6ZJxV24IjDqdpTW7Eh0x+WfJLFsm/TJx1MzL6T0D88mBvkpxotCQ6TwW6N+Kko7lhgQ==}
+  pg-protocol@1.8.0:
+    resolution: {integrity: sha512-jvuYlEkL03NRvOoyoRktBK7+qU5kOvlAwvmrH8sr3wbLrOdVWsRxQfz8mMy9sZFsqJ1hEWNfdWKI4SAmoL+j7g==}
 
   pg-types@2.2.0:
     resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==}
@@ -4356,10 +4402,6 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  solana-agent-kit@file:../michael-v2/packages/core:
-    resolution: {directory: ../michael-v2/packages/core, type: directory}
-    engines: {node: '>=22.0.0', pnpm: '>=8.0.0'}
-
   sonner@2.0.1:
     resolution: {integrity: sha512-FRBphaehZ5tLdLcQ8g2WOIRE+Y7BCfWi5Zyd8bCvBjiW8TxxAyoWZIxS661Yz6TGPqFQ4VLzOF89WEYhfynSFQ==}
     peerDependencies:
@@ -4592,6 +4634,20 @@ packages:
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
+  ts-node@10.9.2:
+    resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
+    hasBin: true
+    peerDependencies:
+      '@swc/core': '>=1.2.50'
+      '@swc/wasm': '>=1.2.50'
+      '@types/node': '*'
+      typescript: '>=2.7'
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      '@swc/wasm':
+        optional: true
+
   tsconfig-paths@3.15.0:
     resolution: {integrity: sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==}
 
@@ -4731,6 +4787,9 @@ packages:
   uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
     hasBin: true
+
+  v8-compile-cache-lib@3.0.1:
+    resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
   valibot@0.36.0:
     resolution: {integrity: sha512-CjF1XN4sUce8sBK9TixrDqFM7RwNkuXdJu174/AwmQUB62QbCQADg5lLe8ldBalFgtj1uKj+pKwDJiNo4Mn+eQ==}
@@ -4919,6 +4978,10 @@ packages:
     resolution: {integrity: sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A==}
     engines: {node: '>=8'}
 
+  yn@3.1.1:
+    resolution: {integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==}
+    engines: {node: '>=6'}
+
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
@@ -5009,6 +5072,15 @@ snapshots:
     optionalDependencies:
       zod: 3.24.1
 
+  '@ai-sdk/provider-utils@2.1.11(zod@3.24.2)':
+    dependencies:
+      '@ai-sdk/provider': 1.0.10
+      eventsource-parser: 3.0.0
+      nanoid: 3.3.8
+      secure-json-parse: 2.7.0
+    optionalDependencies:
+      zod: 3.24.2
+
   '@ai-sdk/provider-utils@2.1.13(zod@3.24.1)':
     dependencies:
       '@ai-sdk/provider': 1.0.11
@@ -5040,15 +5112,15 @@ snapshots:
       react: 19.0.0
       zod: 3.24.1
 
-  '@ai-sdk/react@1.1.21(react@19.0.0)(zod@3.24.1)':
+  '@ai-sdk/react@1.1.21(react@19.0.0)(zod@3.24.2)':
     dependencies:
-      '@ai-sdk/provider-utils': 2.1.11(zod@3.24.1)
-      '@ai-sdk/ui-utils': 1.1.17(zod@3.24.1)
+      '@ai-sdk/provider-utils': 2.1.11(zod@3.24.2)
+      '@ai-sdk/ui-utils': 1.1.17(zod@3.24.2)
       swr: 2.3.0(react@19.0.0)
       throttleit: 2.1.0
     optionalDependencies:
       react: 19.0.0
-      zod: 3.24.1
+      zod: 3.24.2
 
   '@ai-sdk/solid@0.0.54(zod@3.24.1)':
     dependencies:
@@ -5077,13 +5149,13 @@ snapshots:
     optionalDependencies:
       zod: 3.24.1
 
-  '@ai-sdk/ui-utils@1.1.17(zod@3.24.1)':
+  '@ai-sdk/ui-utils@1.1.17(zod@3.24.2)':
     dependencies:
       '@ai-sdk/provider': 1.0.10
-      '@ai-sdk/provider-utils': 2.1.11(zod@3.24.1)
-      zod-to-json-schema: 3.24.1(zod@3.24.1)
+      '@ai-sdk/provider-utils': 2.1.11(zod@3.24.2)
+      zod-to-json-schema: 3.24.3(zod@3.24.2)
     optionalDependencies:
-      zod: 3.24.1
+      zod: 3.24.2
 
   '@ai-sdk/vue@0.0.59(vue@3.5.13(typescript@5.1.6))(zod@3.24.1)':
     dependencies:
@@ -5203,6 +5275,11 @@ snapshots:
       base64-js: 1.5.1
       bech32: 1.1.4
       readonly-date: 1.0.0
+
+  '@cspotcode/source-map-support@0.8.1':
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.9
+    optional: true
 
   '@emnapi/runtime@1.3.1':
     dependencies:
@@ -5458,10 +5535,10 @@ snapshots:
       - encoding
       - immer
 
-  '@getpara/server-sdk@1.5.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+  '@getpara/server-sdk@1.5.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
     dependencies:
-      '@getpara/core-sdk': 1.5.0
-      '@getpara/user-management-client': 1.5.0
+      '@getpara/core-sdk': 1.5.1
+      '@getpara/user-management-client': 1.5.1
       '@sentry/node': 9.5.0
       uuid: 9.0.1
       ws: 8.18.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
@@ -5650,9 +5727,15 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
+  '@jridgewell/trace-mapping@0.3.9':
+    dependencies:
+      '@jridgewell/resolve-uri': 3.1.2
+      '@jridgewell/sourcemap-codec': 1.5.0
+    optional: true
+
   '@jup-ag/api@6.0.40': {}
 
-  '@langchain/community@0.3.20(@browserbasehq/sdk@2.3.0)(@browserbasehq/stagehand@1.8.0(@playwright/test@1.49.1)(bufferutil@4.0.8)(deepmerge@4.3.1)(dotenv@16.4.7)(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))(utf-8-validate@5.0.10)(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/core@0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)))(@langchain/groq@0.1.2(@langchain/core@0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)))(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)))(@supabase/supabase-js@2.47.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(axios@1.7.4)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsdom@25.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10))(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))(playwright@1.49.1)(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))':
+  '@langchain/community@0.3.20(@browserbasehq/sdk@2.3.0)(@browserbasehq/stagehand@1.8.0(@playwright/test@1.49.1)(bufferutil@4.0.8)(deepmerge@4.3.1)(dotenv@16.4.7)(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))(utf-8-validate@5.0.10)(zod@3.24.1))(@ibm-cloud/watsonx-ai@1.3.0)(@langchain/core@0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)))(@langchain/groq@0.1.2(@langchain/core@0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)))(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)))(@supabase/supabase-js@2.47.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(axios@1.7.4)(crypto-js@4.2.0)(ibm-cloud-sdk-core@5.1.0)(ignore@5.3.2)(jsdom@25.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10))(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))(playwright@1.49.1)(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))':
     dependencies:
       '@browserbasehq/stagehand': 1.8.0(@playwright/test@1.49.1)(bufferutil@4.0.8)(deepmerge@4.3.1)(dotenv@16.4.7)(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))(utf-8-validate@5.0.10)(zod@3.24.1)
       '@ibm-cloud/watsonx-ai': 1.3.0
@@ -5672,6 +5755,7 @@ snapshots:
     optionalDependencies:
       '@browserbasehq/sdk': 2.3.0
       '@supabase/supabase-js': 2.47.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      crypto-js: 4.2.0
       ignore: 5.3.2
       jsdom: 25.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       jsonwebtoken: 9.0.2
@@ -6431,68 +6515,6 @@ snapshots:
       '@opentelemetry/semantic-conventions': 1.30.0
       '@sentry/core': 9.5.0
 
-  '@solana-agent-kit/plugin-para-server@file:../solana-plugin-para/packages/plugin-para-server(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)':
-    dependencies:
-      '@getpara/server-sdk': 1.5.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@solana/web3.js': 1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      bs58: 6.0.0
-      solana-agent-kit: file:../michael-v2/packages/core(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)
-      zod: 3.24.1
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - encoding
-      - react
-      - supports-color
-      - utf-8-validate
-
-  '@solana-agent-kit/plugin-para-web@file:../solana-plugin-para/packages/plugin-para-web(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)':
-    dependencies:
-      '@getpara/solana-web3.js-v1-integration': 1.5.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@getpara/web-sdk': 1.5.0
-      '@solana/web3.js': 1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      bs58: 6.0.0
-      solana-agent-kit: file:../michael-v2/packages/core(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)
-      zod: 3.24.2
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - encoding
-      - react
-      - utf-8-validate
-
-  '@solana-agent-kit/plugin-token@file:../michael-v2/packages/plugin-token(@noble/hashes@1.6.1)(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(fastestsmallesttextencoderdecoder@1.0.22)(solana-agent-kit@file:../michael-v2/packages/core(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10))(typescript@5.1.6)(utf-8-validate@5.0.10)':
-    dependencies:
-      '@lightprotocol/compressed-token': 0.20.9(@lightprotocol/stateless.js@0.20.9(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)))(@solana/spl-token@0.4.13(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.1.6)(utf-8-validate@5.0.10))(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))
-      '@lightprotocol/stateless.js': 0.20.9(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))
-      '@mayanfinance/swap-sdk': 10.4.0(bufferutil@4.0.8)(typescript@5.1.6)(utf-8-validate@5.0.10)
-      '@metaplex-foundation/digital-asset-standard-api': 1.0.6(@metaplex-foundation/umi@1.1.1)
-      '@metaplex-foundation/mpl-core': 1.2.0(@metaplex-foundation/umi@1.1.1)(@noble/hashes@1.6.1)
-      '@metaplex-foundation/mpl-token-metadata': 3.4.0(@metaplex-foundation/umi@1.1.1)
-      '@metaplex-foundation/mpl-toolbox': 0.9.4(@metaplex-foundation/umi@1.1.1)
-      '@metaplex-foundation/umi': 1.1.1
-      '@metaplex-foundation/umi-bundle-defaults': 1.1.1(@metaplex-foundation/umi@1.1.1)(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))
-      '@metaplex-foundation/umi-web3js-adapters': 1.1.1(@metaplex-foundation/umi@1.1.1)(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))
-      '@openzeppelin/contracts': 5.2.0
-      '@solana/spl-token': 0.4.13(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.1.6)(utf-8-validate@5.0.10)
-      '@solana/web3.js': 1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@solutiofi/sdk': 1.0.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@types/bn.js': 5.1.6
-      bn.js: 5.2.1
-      ethers: 6.13.5(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      solana-agent-kit: file:../michael-v2/packages/core(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)
-      zod: 3.24.2
-    transitivePeerDependencies:
-      - '@gql.tada/svelte-support'
-      - '@gql.tada/vue-support'
-      - '@noble/hashes'
-      - bufferutil
-      - debug
-      - encoding
-      - fastestsmallesttextencoderdecoder
-      - typescript
-      - utf-8-validate
-
   '@solana/buffer-layout-utils@0.2.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
     dependencies:
       '@solana/buffer-layout': 4.0.1
@@ -6683,13 +6705,13 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@tailwindcss/typography@0.5.15(tailwindcss@3.3.3)':
+  '@tailwindcss/typography@0.5.15(tailwindcss@3.3.3(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.1.6)))':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.3.3
+      tailwindcss: 3.3.3(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.1.6))
 
   '@tanstack/query-core@5.67.2': {}
 
@@ -6699,6 +6721,18 @@ snapshots:
       react: 19.0.0
 
   '@tokenizer/token@0.3.0': {}
+
+  '@tsconfig/node10@1.0.11':
+    optional: true
+
+  '@tsconfig/node12@1.0.11':
+    optional: true
+
+  '@tsconfig/node14@1.0.3':
+    optional: true
+
+  '@tsconfig/node16@1.0.4':
+    optional: true
 
   '@types/bn.js@5.1.6':
     dependencies:
@@ -6774,7 +6808,7 @@ snapshots:
   '@types/pg@8.6.1':
     dependencies:
       '@types/node': 20.12.12
-      pg-protocol: 1.7.1
+      pg-protocol: 1.8.0
       pg-types: 2.2.0
 
   '@types/phoenix@1.6.6': {}
@@ -6864,6 +6898,80 @@ snapshots:
       eslint-visitor-keys: 3.4.3
 
   '@ungap/structured-clone@1.3.0': {}
+
+  '@uratmangun/plugin-para-server@2.0.1(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@getpara/server-sdk': 1.5.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@solana/web3.js': 1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      bs58: 6.0.0
+      solana-agent-kit: '@uratmangun/solana-agent-kit@2.0.2(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)'
+      zod: 3.24.2
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - encoding
+      - react
+      - supports-color
+      - utf-8-validate
+
+  '@uratmangun/plugin-para-web@2.0.2(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@getpara/solana-web3.js-v1-integration': 1.5.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@getpara/web-sdk': 1.5.0
+      '@solana/web3.js': 1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      bs58: 6.0.0
+      solana-agent-kit: '@uratmangun/solana-agent-kit@2.0.2(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)'
+      zod: 3.24.2
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - encoding
+      - react
+      - utf-8-validate
+
+  '@uratmangun/plugin-token@2.0.2(@noble/hashes@1.6.1)(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(@uratmangun/solana-agent-kit@2.0.2(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.1.6)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@lightprotocol/compressed-token': 0.20.9(@lightprotocol/stateless.js@0.20.9(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)))(@solana/spl-token@0.4.13(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.1.6)(utf-8-validate@5.0.10))(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))
+      '@lightprotocol/stateless.js': 0.20.9(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))
+      '@mayanfinance/swap-sdk': 10.4.0(bufferutil@4.0.8)(typescript@5.1.6)(utf-8-validate@5.0.10)
+      '@metaplex-foundation/digital-asset-standard-api': 1.0.6(@metaplex-foundation/umi@1.1.1)
+      '@metaplex-foundation/mpl-core': 1.2.0(@metaplex-foundation/umi@1.1.1)(@noble/hashes@1.6.1)
+      '@metaplex-foundation/mpl-token-metadata': 3.4.0(@metaplex-foundation/umi@1.1.1)
+      '@metaplex-foundation/mpl-toolbox': 0.9.4(@metaplex-foundation/umi@1.1.1)
+      '@metaplex-foundation/umi': 1.1.1
+      '@metaplex-foundation/umi-bundle-defaults': 1.1.1(@metaplex-foundation/umi@1.1.1)(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))
+      '@metaplex-foundation/umi-web3js-adapters': 1.1.1(@metaplex-foundation/umi@1.1.1)(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))
+      '@openzeppelin/contracts': 5.2.0
+      '@solana/spl-token': 0.4.13(@solana/web3.js@1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10))(bufferutil@4.0.8)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.1.6)(utf-8-validate@5.0.10)
+      '@solana/web3.js': 1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@solutiofi/sdk': 1.0.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      '@types/bn.js': 5.1.6
+      bn.js: 5.2.1
+      ethers: 6.13.5(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      solana-agent-kit: '@uratmangun/solana-agent-kit@2.0.2(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)'
+      zod: 3.24.2
+    transitivePeerDependencies:
+      - '@gql.tada/svelte-support'
+      - '@gql.tada/vue-support'
+      - '@noble/hashes'
+      - bufferutil
+      - debug
+      - encoding
+      - fastestsmallesttextencoderdecoder
+      - typescript
+      - utf-8-validate
+
+  '@uratmangun/solana-agent-kit@2.0.2(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@solana/web3.js': 1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      ai: 4.1.54(react@19.0.0)(zod@3.24.2)
+      bs58: 6.0.0
+      zod: 3.24.2
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - react
+      - utf-8-validate
 
   '@vue/compiler-core@3.5.13':
     dependencies:
@@ -6985,17 +7093,17 @@ snapshots:
       - solid-js
       - vue
 
-  ai@4.1.54(react@19.0.0)(zod@3.24.1):
+  ai@4.1.54(react@19.0.0)(zod@3.24.2):
     dependencies:
       '@ai-sdk/provider': 1.0.10
-      '@ai-sdk/provider-utils': 2.1.11(zod@3.24.1)
-      '@ai-sdk/react': 1.1.21(react@19.0.0)(zod@3.24.1)
-      '@ai-sdk/ui-utils': 1.1.17(zod@3.24.1)
+      '@ai-sdk/provider-utils': 2.1.11(zod@3.24.2)
+      '@ai-sdk/react': 1.1.21(react@19.0.0)(zod@3.24.2)
+      '@ai-sdk/ui-utils': 1.1.17(zod@3.24.2)
       '@opentelemetry/api': 1.9.0
       jsondiffpatch: 0.6.0
     optionalDependencies:
       react: 19.0.0
-      zod: 3.24.1
+      zod: 3.24.2
 
   ajv@6.12.6:
     dependencies:
@@ -7022,6 +7130,9 @@ snapshots:
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.1
+
+  arg@4.1.3:
+    optional: true
 
   arg@5.0.2: {}
 
@@ -7401,6 +7512,9 @@ snapshots:
       safe-buffer: 5.2.1
       sha.js: 2.4.11
 
+  create-require@1.1.1:
+    optional: true
+
   cross-fetch@3.2.0:
     dependencies:
       node-fetch: 2.7.0
@@ -7412,6 +7526,9 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+
+  crypto-js@4.2.0:
+    optional: true
 
   css-color-keywords@1.0.0: {}
 
@@ -7505,6 +7622,9 @@ snapshots:
   didyoumean@1.2.2: {}
 
   diff-match-patch@1.0.5: {}
+
+  diff@4.0.2:
+    optional: true
 
   dijkstrajs@1.0.3: {}
 
@@ -8663,6 +8783,8 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
+  ky@1.7.5: {}
+
   langchain@0.3.8(@langchain/core@0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)))(@langchain/groq@0.1.2(@langchain/core@0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)))(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10)))(axios@1.7.4)(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1)):
     dependencies:
       '@langchain/core': 0.3.26(openai@4.86.2(ws@7.5.10(bufferutil@4.0.8)(utf-8-validate@5.0.10))(zod@3.24.1))
@@ -8760,6 +8882,9 @@ snapshots:
   magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  make-error@1.3.6:
+    optional: true
 
   map-obj@5.0.0: {}
 
@@ -9291,7 +9416,7 @@ snapshots:
 
   pg-int8@1.0.1: {}
 
-  pg-protocol@1.7.1: {}
+  pg-protocol@1.8.0: {}
 
   pg-types@2.2.0:
     dependencies:
@@ -9335,12 +9460,13 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.4.27
 
-  postcss-load-config@4.0.2(postcss@8.4.27):
+  postcss-load-config@4.0.2(postcss@8.4.27)(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.1.6)):
     dependencies:
       lilconfig: 3.1.3
       yaml: 2.6.1
     optionalDependencies:
       postcss: 8.4.27
+      ts-node: 10.9.2(@types/node@20.12.12)(typescript@5.1.6)
 
   postcss-nested@6.2.0(postcss@8.4.27):
     dependencies:
@@ -9750,18 +9876,6 @@ snapshots:
 
   slash@3.0.0: {}
 
-  solana-agent-kit@file:../michael-v2/packages/core(bufferutil@4.0.8)(react@19.0.0)(utf-8-validate@5.0.10):
-    dependencies:
-      '@solana/web3.js': 1.98.0(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      ai: 4.1.54(react@19.0.0)(zod@3.24.1)
-      bs58: 6.0.0
-      zod: 3.24.1
-    transitivePeerDependencies:
-      - bufferutil
-      - encoding
-      - react
-      - utf-8-validate
-
   sonner@2.0.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       react: 19.0.0
@@ -9952,11 +10066,11 @@ snapshots:
 
   tailwind-merge@3.0.2: {}
 
-  tailwindcss-animate@1.0.7(tailwindcss@3.3.3):
+  tailwindcss-animate@1.0.7(tailwindcss@3.3.3(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.1.6))):
     dependencies:
-      tailwindcss: 3.3.3
+      tailwindcss: 3.3.3(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.1.6))
 
-  tailwindcss@3.3.3:
+  tailwindcss@3.3.3(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.1.6)):
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -9975,7 +10089,7 @@ snapshots:
       postcss: 8.4.27
       postcss-import: 15.1.0(postcss@8.4.27)
       postcss-js: 4.0.1(postcss@8.4.27)
-      postcss-load-config: 4.0.2(postcss@8.4.27)
+      postcss-load-config: 4.0.2(postcss@8.4.27)(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.1.6))
       postcss-nested: 6.2.0(postcss@8.4.27)
       postcss-selector-parser: 6.1.2
       resolve: 1.22.10
@@ -10040,6 +10154,25 @@ snapshots:
   trough@2.2.0: {}
 
   ts-interface-checker@0.1.13: {}
+
+  ts-node@10.9.2(@types/node@20.12.12)(typescript@5.1.6):
+    dependencies:
+      '@cspotcode/source-map-support': 0.8.1
+      '@tsconfig/node10': 1.0.11
+      '@tsconfig/node12': 1.0.11
+      '@tsconfig/node14': 1.0.3
+      '@tsconfig/node16': 1.0.4
+      '@types/node': 20.12.12
+      acorn: 8.14.1
+      acorn-walk: 8.3.4
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
+      typescript: 5.1.6
+      v8-compile-cache-lib: 3.0.1
+      yn: 3.1.1
+    optional: true
 
   tsconfig-paths@3.15.0:
     dependencies:
@@ -10205,6 +10338,9 @@ snapshots:
   uuid@8.3.2: {}
 
   uuid@9.0.1: {}
+
+  v8-compile-cache-lib@3.0.1:
+    optional: true
 
   valibot@0.36.0: {}
 
@@ -10407,6 +10543,9 @@ snapshots:
       y18n: 4.0.3
       yargs-parser: 18.1.3
 
+  yn@3.1.1:
+    optional: true
+
   yocto-queue@0.1.0: {}
 
   zimmerframe@1.1.2: {}
@@ -10422,7 +10561,6 @@ snapshots:
   zod-to-json-schema@3.24.3(zod@3.24.2):
     dependencies:
       zod: 3.24.2
-    optional: true
 
   zod@3.24.1: {}
 

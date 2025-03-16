@@ -10,15 +10,13 @@ export function listParaToolsWeb() {
             similes: [
                 "claim para pregen wallet"
             ],
-            schema: z.object({
-                email: z.string().describe("The email address to create the wallet for")
-            }),
+            schema: z.object({}),
         },
         {
             name: "GET_ALL_WALLETS",
             description: "Get all wallets",
             similes: [
-                "get all wallets"
+                "get all wallets owned by the user"
             ],
             schema: z.object({}),
         },
